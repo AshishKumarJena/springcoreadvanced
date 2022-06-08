@@ -12,12 +12,16 @@
     http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<context:component-scan
-		base-package="com.ashish.spring.springcore.stereotype.annotations"></context:component-scan>
-
-	<util:list list-class="java.util.LinkedList" id="topics">
-		<value>Java Web Services</value>
-		<value>Core Java</value>
-		<value>XSLT</value>
+	<util:list list-class="java.util.LinkedList"
+		id="productNames">
+		<value>MacBook</value>
+		<value>iPhone</value>
 	</util:list>
+
+	<bean name="productsList"
+		class="com.ashish.spring.springcoreadvanced.standalone.collections.ProductsList">
+		<property name="productNames">
+			<ref bean="productNames" />
+		</property>
+	</bean>
 </beans>

@@ -11,13 +11,21 @@
     http://www.springframework.org/schema/context/spring-context.xsd
     http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util.xsd">
-
-	<context:component-scan
-		base-package="com.ashish.spring.springcore.stereotype.annotations"></context:component-scan>
-
-	<util:list list-class="java.util.LinkedList" id="topics">
-		<value>Java Web Services</value>
-		<value>Core Java</value>
-		<value>XSLT</value>
-	</util:list>
+    
+    <context:component-scan base-package="com.ashish.spring.springcoreadvanced.injecting.interfaces"/>
+<!-- 
+	<bean
+		class="com.ashish.spring.springcoreadvanced.injecting.interfaces.OrderDAOImpl"
+		name="dao" />
+		
+		<bean
+		class="com.ashish.spring.springcoreadvanced.injecting.interfaces.OrderDAOImpl2"
+		name="dao2" />
+	<bean
+		class="com.ashish.spring.springcoreadvanced.injecting.interfaces.OrderBOImpl"
+		name="bo">
+		<property name="dao" ref="dao2" />
+	</bean>
+	
+-->
 </beans>

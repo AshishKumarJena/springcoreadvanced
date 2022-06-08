@@ -9,8 +9,11 @@ public class Test {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/ashish/spring/springcore/stereotype/annotations/stereotypeannotations.xml");
-		Instructor instructor = (Instructor) context.getBean("instructor");
+		Instructor instructor = (Instructor) context.getBean("inst");
 		System.out.println(instructor);
+
+		Instructor instructor2 = (Instructor) context.getBean("inst");
+		System.out.println(instructor2);
 
 	}
 
